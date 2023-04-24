@@ -1,0 +1,13 @@
+#ifndef __sample_h__
+#define __sample_h__
+
+using namespace std;
+class sample {
+private:
+
+public:
+    sample();
+    ~sample();
+};
+
+#endif
