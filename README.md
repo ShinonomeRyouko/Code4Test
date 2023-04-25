@@ -4,7 +4,7 @@ Code4Test is a personal tiny project aimed to solve leetcode problems with [Goog
 ### Build for POSIX
 ```bash
 mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Debug .. && cmake --build .
+cmake -DCMAKE_BUILD_TYPE=Debug .. && make -j`nproc`
 cd test && ctest
 ```
 # How to use
