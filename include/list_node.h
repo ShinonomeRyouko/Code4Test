@@ -29,4 +29,9 @@ struct ListNode {
     }
 };
 
+bool IsTwoListValueEQ(ListNode* l, ListNode* r);
+
+// Assume not broken.
+void ReleaseListMem(ListNode* l);
+
 #endif

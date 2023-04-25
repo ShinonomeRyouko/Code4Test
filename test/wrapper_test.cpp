@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "wrapper.h"
-#include <list_node.h>
+#include "list_node.h"
 
 
 TEST(wrapperTest, SimpleTest) {
