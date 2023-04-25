@@ -12,11 +12,16 @@ enable_testing()
 include(GoogleTest)
 
 foreach(class ${CLASS_NAMES})
+if (NOT ${class} IN_LIST HEADER_CLASS_NAMES)
+set(NEED_HEADER, ${HEADER_CLASS_NAMES})
+else()
+set(NEED_HEADER, " ")
+endif()
 add_executable(${class}_test
                 ${class}_test.cpp)
 target_link_libraries(${class}_test
                         ${class}
-                        ${HEADER_CLASS_NAMES}
+                        ${NEED_HEADER}
                         gtest_main)
 gtest_discover_tests(${class}_test)
 endforeach()

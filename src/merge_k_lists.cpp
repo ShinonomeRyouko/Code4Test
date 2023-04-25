@@ -17,7 +17,7 @@ ListNode* merge_k_lists::mergeKLists(vector<ListNode*>& lists) {
     priority_queue<ListNode*, vector<ListNode*>, decltype(cmp)> pq(cmp);
     for (auto list : lists) {
         if (list != nullptr) {
-            pq.push(list);;
+            pq.push(list);
         }
     }
     while (!pq.empty()) {

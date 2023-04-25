@@ -1,10 +1,12 @@
 #include <gtest/gtest.h>
+#include "wrapper.h"
 #include "list_node.h"
 
 
 TEST(list_nodeTest, SimpleTest) {
-    vector<int> vec{4,1,2,3};
-    ListNode* head = gen_list_from_vector(vec);
+    vector<int> vec{4,1,2,3,7,6,0};
+    wrapper<ListNode> node_pool;
+    ListNode* head = node_pool.gen_from_source(vec);
     ListNode* cur = head;
     for (auto it : vec) {
         ASSERT_NE(cur, nullptr);
@@ -12,5 +14,4 @@ TEST(list_nodeTest, SimpleTest) {
         cur = cur->next;
     }
     EXPECT_TRUE(cur == nullptr);
-    release_list(head);
 }
