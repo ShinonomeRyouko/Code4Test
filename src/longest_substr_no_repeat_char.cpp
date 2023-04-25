@@ -20,7 +20,7 @@ int longest_substr_no_repeat_char::lengthOfLongestSubstring(string s) {
             left++;
         }
         filter.insert(ch);
-        max_len = (cur - left + 1 > max_len) ? cur - left + 1 : max_len;
+        max_len = max(cur - left + 1, max_len);
         cur++;
     }
     return max_len;

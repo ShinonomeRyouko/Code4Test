@@ -11,6 +11,7 @@ enable_testing()
 
 include(GoogleTest)
 
+# The common header files.
 foreach(class ${HEADER_NAMES})
 add_executable(${class}_test
                 ${class}_test.cpp)
@@ -20,6 +21,7 @@ target_link_libraries(${class}_test
 gtest_discover_tests(${class}_test)
 endforeach()
 
+# The solution files.
 foreach(class ${SOLUTION_NAMES})
 add_executable(${class}_test
                 ${class}_test.cpp)
