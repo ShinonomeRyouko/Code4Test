@@ -7,6 +7,7 @@ using namespace std;
 template <class T>
 class wrapper {
 private:
+    // Track all the T class generated through wrapper.
     vector<T*> elements;
 public:
     wrapper() = default;

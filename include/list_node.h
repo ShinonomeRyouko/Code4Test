@@ -10,22 +10,19 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
     static ListNode* gen_from_source(const vector<int>& source, vector<ListNode*>& elements) {
-        ListNode* head = nullptr;
-        ListNode* cur = nullptr;
-        ListNode* prev = nullptr;
+        int start = elements.size();
         for (auto it : source) {
-            cur = new ListNode(it);
             // track it to prevent mem leak.
-            elements.push_back(cur);
-            if (head == nullptr) {
-                head = cur;
-                prev = head;
-                continue;
-            }
-            prev->next = cur;
-            prev = cur;
+            elements.emplace_back(new ListNode(it));
         }
-        return head;
+        int end = elements.size();
+        if (start == end) {
+            return nullptr;
+        }
+        for (int i = start; i < end - 1; i++) {
+            elements[i]->next = elements[i + 1];
+        }
+        return elements[start];
     }
 };
 
