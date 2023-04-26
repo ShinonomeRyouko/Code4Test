@@ -29,3 +29,31 @@ TEST(tree_nodeTest, SimpleTest) {
     vector<int> ans_3{4,5,2,6,7,3,1};
     EXPECT_TRUE(res_3 == ans_3);
 }
+
+/*
+ *      1
+ *        \
+ *         2
+ *        /
+ *       3
+ */
+TEST(tree_nodeTest, NullNodeTest) {
+    wrapper<TreeNode> node_pool;
+    vector<int> vec{1,NAINT,2,NAINT,NAINT,3,NAINT};
+    TreeNode* root = node_pool.gen_from_source(vec);
+
+    vector<int> res_1;
+    PreorderTraversal(root, res_1);
+    vector<int> ans_1{1,2,3};
+    EXPECT_TRUE(res_1 == ans_1);
+
+    vector<int> res_2;
+    InorderTraversal(root, res_2);
+    vector<int> ans_2{1,3,2};
+    EXPECT_TRUE(res_2 == ans_2);
+
+    vector<int> res_3;
+    PostorderTraversal(root, res_3);
+    vector<int> ans_3{3,2,1};
+    EXPECT_TRUE(res_3 == ans_3);
+}

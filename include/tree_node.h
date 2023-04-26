@@ -30,6 +30,9 @@ struct TreeNode {
             return nullptr;
         }
         for (int i = start; 2 * (i - start) + 2 + start < end; i++) {
+            if (elements[i] == nullptr) {
+                continue;
+            }
             elements[i]->left = elements[2 * (i - start) + 1 + start];
             elements[i]->right = elements[2 * (i - start) + 2 + start];
         }
