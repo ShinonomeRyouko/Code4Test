@@ -9,7 +9,7 @@ struct ListNode {
     ListNode() : val(0), next(nullptr) {}
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
-    static ListNode* const gen_from_source(const vector<int>& source, vector<ListNode*>& elements) {
+    static ListNode* gen_from_source(const vector<int>& source, vector<ListNode*>& elements) {
         ListNode* head = nullptr;
         ListNode* cur = nullptr;
         ListNode* prev = nullptr;

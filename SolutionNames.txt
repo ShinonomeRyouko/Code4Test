@@ -7,3 +7,4 @@ add_two_numbers
 longest_valid_parentheses 
 edit_distance 
 min_window_substr 
+largest_rectangle_in_histogram 
