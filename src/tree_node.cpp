@@ -96,3 +96,30 @@ vector<vector<int>> levelOrder(TreeNode* root) {
     }
     return res;
 }
+
+// binary tree right side view.
+vector<int> rightSideView(TreeNode* root) {
+    vector<int> res;
+    if (root == nullptr) {
+        return res;
+    }
+    stack<pair<TreeNode*, int>> stk;
+    stk.emplace(root, 0);
+    pair<TreeNode*, int> top_node;
+    while (!stk.empty()) {
+        top_node = stk.top();
+        stk.pop();
+        // A rightmost node in a new layer.
+        if (res.size() <= top_node.second) {
+            res.emplace_back(top_node.first->val);
+        }
+        // push left child first, so then you will visit right child first.
+        if (top_node.first->left != nullptr) {
+            stk.emplace(top_node.first->left, top_node.second + 1);
+        }
+        if (top_node.first->right != nullptr) {
+            stk.emplace(top_node.first->right, top_node.second + 1);
+        }
+    }
+    return res;
+}
