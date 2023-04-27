@@ -2,6 +2,13 @@
 #include "wrapper.h"
 #include "tree_node.h"
 
+inline void CheckTraversal(TreeNode* root, vector<int> ans, 
+                            void (*TraversalFunc)(TreeNode* root, vector<int>& results)) {
+    vector<int> res;
+    TraversalFunc(root, res);
+    EXPECT_TRUE(res == ans); 
+}
+
 /*
  *      1
  *    /   \
@@ -14,46 +21,34 @@ TEST(tree_nodeTest, SimpleTest) {
     vector<int> vec{1,2,3,4,5,6,7};
     TreeNode* root = node_pool.gen_from_source(vec);
 
-    vector<int> res_1;
-    PreorderTraversal(root, res_1);
-    vector<int> ans_1{1,2,4,5,3,6,7};
-    EXPECT_TRUE(res_1 == ans_1);
+    CheckTraversal(root, {1,2,4,5,3,6,7}, PreorderTraversal);
 
-    vector<int> res_2;
-    InorderTraversal(root, res_2);
-    vector<int> ans_2{4,2,5,1,6,3,7};
-    EXPECT_TRUE(res_2 == ans_2);
+    CheckTraversal(root, {4,2,5,1,6,3,7}, InorderTraversal);
 
-    vector<int> res_3;
-    PostorderTraversal(root, res_3);
-    vector<int> ans_3{4,5,2,6,7,3,1};
-    EXPECT_TRUE(res_3 == ans_3);
+    CheckTraversal(root, {4,5,2,6,7,3,1}, PostorderTraversal);
+
+    CheckTraversal(root, {1,2,3,4,5,6,7}, LevelorderTraversal);
 }
 
 /*
  *      1
- *        \
- *         2
- *        /
- *       3
+ *    /   \
+ *   2     3
+ *   \     /
+ *    4   5
+ *         \
+ *          6
  */
 TEST(tree_nodeTest, NullNodeTest) {
     wrapper<TreeNode> node_pool;
-    vector<int> vec{1,NAINT,2,NAINT,NAINT,3,NAINT};
+    vector<int> vec{1,2,3,NAINT,4,5,NAINT,NAINT,NAINT,NAINT,NAINT, NAINT,6};
     TreeNode* root = node_pool.gen_from_source(vec);
 
-    vector<int> res_1;
-    PreorderTraversal(root, res_1);
-    vector<int> ans_1{1,2,3};
-    EXPECT_TRUE(res_1 == ans_1);
+    CheckTraversal(root, {1,2,4,3,5,6}, PreorderTraversal);
 
-    vector<int> res_2;
-    InorderTraversal(root, res_2);
-    vector<int> ans_2{1,3,2};
-    EXPECT_TRUE(res_2 == ans_2);
+    CheckTraversal(root, {2,4,1,5,6,3}, InorderTraversal);
 
-    vector<int> res_3;
-    PostorderTraversal(root, res_3);
-    vector<int> ans_3{3,2,1};
-    EXPECT_TRUE(res_3 == ans_3);
+    CheckTraversal(root, {4,2,6,5,3,1}, PostorderTraversal);
+
+    CheckTraversal(root, {1,2,3,4,5,6}, LevelorderTraversal);
 }

@@ -1,5 +1,6 @@
 #include "tree_node.h"
 #include <stack>
+#include <queue>
 void PreorderTraversal(TreeNode* root, vector<int>& results) {
     if (root == nullptr) {
         return;
@@ -57,4 +58,41 @@ void PostorderTraversal(TreeNode* root, vector<int>& results) {
             stk.pop();
         }
     }
+}
+
+void LevelorderTraversal(TreeNode* root, vector<int>& results) {
+    queue<TreeNode*> pq;
+    pq.emplace(root);
+    while (!pq.empty()) {
+        if (pq.front() == nullptr) {
+            pq.pop();
+            continue;
+        }
+        results.emplace_back(pq.front()->val);
+        pq.emplace(pq.front()->left);
+        pq.emplace(pq.front()->right);
+        pq.pop();
+    }
+    return;
+}
+
+// Same as LevelorderTraversal but return vector each layer.
+vector<vector<int>> levelOrder(TreeNode* root) {
+    vector<vector<int>> res;
+    queue<pair<TreeNode*, int>> pq;
+    pq.emplace(root, 0);
+    while (!pq.empty()) {
+        if (pq.front().first == nullptr) {
+            pq.pop();
+            continue;
+        }
+        if (pq.front().second >= res.size()) {
+            res.emplace_back();
+        }
+        res[pq.front().second].emplace_back(pq.front().first->val);
+        pq.emplace(pq.front().first->left, pq.front().second + 1);
+        pq.emplace(pq.front().first->right, pq.front().second + 1);
+        pq.pop();
+    }
+    return res;
 }
