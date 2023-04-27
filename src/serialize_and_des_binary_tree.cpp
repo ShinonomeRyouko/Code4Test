@@ -5,7 +5,9 @@ serialize_and_des_binary_tree::serialize_and_des_binary_tree() {
 }
 
 serialize_and_des_binary_tree::~serialize_and_des_binary_tree() {
-    
+    for (auto it : gc) {
+        delete it;
+    }
 }
 
 // Encodes a tree to a single string.
@@ -30,13 +32,14 @@ void split(const string& txt, queue<string>& res, char ch) {
     }
 }
 
-TreeNode* build(queue<string>& str_list) {
+TreeNode* serialize_and_des_binary_tree::build(queue<string>& str_list) {
     string str = str_list.front();
     str_list.pop();
     if (str == "x") {
         return nullptr;
     }
     TreeNode* root = new TreeNode(stoi(str));
+    gc.emplace_back(root);
     root->left = build(str_list);
     root->right = build(str_list);
     return root;

@@ -9,6 +9,11 @@ SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall -Wextra \
 -Wno-unused-variable -Wno-sign-compare -Werror=return-type -Werror=uninitialized")
 endif()
 
+if (${SANITIZER_CHECK})
+SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fsanitize=address \
+-fno-omit-frame-pointer -fsanitize=leak -O0")
+endif()
+
 set (COMMON_HEADER_TXT "CommonHeader.txt")
 set (SOLUTION_NAME_TXT "SolutionNames.txt")
 
