@@ -76,6 +76,13 @@ void LevelorderTraversal(TreeNode* root, vector<int>& results) {
     return;
 }
 
+/**
+ *   Function emplace do in-place constructor for object, while
+ * push need to construct a temporary obj and move it(move constructor)
+ * to the container and destruct the temporary obj.
+ *   So use emplace as often as you can.
+ **/
+
 // Same as LevelorderTraversal but return vector each layer.
 vector<vector<int>> levelOrder(TreeNode* root) {
     vector<vector<int>> res;
