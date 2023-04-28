@@ -1,17 +1,39 @@
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
-project(Code4Test)
+project(Code4Test LANGUAGES CXX)
 
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 14)
+# Require (at least) it
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Don't use e.g. GNU extension (like -std=gnu++11) for portability
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+option(SANITIZER_CHECK "Enable sanitizer check" OFF)
+
+option(CODE_COVERAGE "Enable coverage report" OFF)
 
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wshadow=local \
--Wno-unused-variable -Wno-sign-compare -Werror=return-type -Werror=uninitialized")
-endif()
-
-if (${SANITIZER_CHECK})
-SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fsanitize=address \
--fno-omit-frame-pointer -fsanitize=leak -O0")
+    SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic \
+    -Wnon-virtual-dtor -Wshadow=local \
+    -Wno-unused-variable -Wno-sign-compare \
+    -Werror=return-type -Werror=uninitialized")
+    if (SANITIZER_CHECK)
+        SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fsanitize=address \
+        -fno-omit-frame-pointer -fsanitize=leak -O0")
+    endif()
+    if (CODE_COVERAGE)
+        # -g generate debug info.
+        SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -g --coverage")
+        include(CheckCXXCompilerFlag)
+        check_cxx_compiler_flag(-fprofile-abs-path HAVE_fprofile_abs_path)
+        if(HAVE_fprofile_abs_path)
+            set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fprofile-abs-path")
+        endif()
+        check_cxx_compiler_flag(-fprofile-exclude-files HAVE_fprofile_exclude_files)
+        if(HAVE_fprofile_exclude_files)
+            set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} --fprofile-exclude-files=test/*;/usr/*")
+        endif()
+    endif()
 endif()
 
 set (COMMON_HEADER_TXT "CommonHeader.txt")
