@@ -8,10 +8,10 @@ surrounded_regions::~surrounded_regions() {
     
 }
 #include <cassert>
-void surrounded_regions::BFS(vector<vector<char>>& board, int row, int col, int i, int j) {
+void surrounded_regions::BFS(vector<vector<char>>& board, int row, int col, int x, int y) {
     queue<pair<int, int>> q;
-    board[i][j] = 'A';
-    q.emplace(i, j);
+    board[x][y] = 'A';
+    q.emplace(x, y);
     int nx, ny;
     while (!q.empty()) {
         for (int i = 0; i < 4; i++) {
