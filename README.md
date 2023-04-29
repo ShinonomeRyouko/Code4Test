@@ -1,8 +1,4 @@
-# Code4Test
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ShinonomeRyouko/Code4Test/blob/main/LICENSE)
-[![Build Status](https://app.travis-ci.com/ShinonomeRyouko/Code4Test.svg?branch=main)](https://app.travis-ci.com/ShinonomeRyouko/Code4Test)
-[![codecov](https://codecov.io/gh/ShinonomeRyouko/Code4Test/branch/main/graph/badge.svg?token=SMRDNEML4X)](https://codecov.io/gh/ShinonomeRyouko/Code4Test)
-[![GitHub Super-Linter](https://github.com/ShinonomeRyouko/Code4Test/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+# Code4Test &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ShinonomeRyouko/Code4Test/blob/main/LICENSE) [![Build Status](https://app.travis-ci.com/ShinonomeRyouko/Code4Test.svg?branch=main)](https://app.travis-ci.com/ShinonomeRyouko/Code4Test) [![codecov](https://codecov.io/gh/ShinonomeRyouko/Code4Test/branch/main/graph/badge.svg?token=SMRDNEML4X)](https://codecov.io/gh/ShinonomeRyouko/Code4Test)
 
 Code4Test is a personal tiny project aimed to solve leetcode problems with [GoogleTest](https://github.com/google/googletest.git) integrated.
 

@@ -1,4 +1,5 @@
 #include "maximal_rectangle.h"
+
 #include <stack>
 
 using namespace std;

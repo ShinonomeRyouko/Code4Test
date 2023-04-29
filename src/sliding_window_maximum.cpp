@@ -1,4 +1,5 @@
 #include "sliding_window_maximum.h"
+
 #include <queue>
 
 using namespace std;
