@@ -5,7 +5,6 @@
 using namespace std;
 class edit_distance {
 private:
-
 public:
     edit_distance();
     ~edit_distance();

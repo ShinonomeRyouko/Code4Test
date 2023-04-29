@@ -1,12 +1,8 @@
 #include "coin_change.h"
 
-coin_change::coin_change() {
-    
-}
+coin_change::coin_change() {}
 
-coin_change::~coin_change() {
-    
-}
+coin_change::~coin_change() {}
 
 int coin_change::coinChange(vector<int>& coins, int amount) {
     vector<int> dp(1 + amount, 1 + amount);

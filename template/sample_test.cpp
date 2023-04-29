@@ -1,6 +1,6 @@
-#include "gtest/gtest.h"
 #include "sample.h"
 
+#include "gtest/gtest.h"
 
 TEST(sampleTest, SimpleTest) {
     sample* obj = new sample();

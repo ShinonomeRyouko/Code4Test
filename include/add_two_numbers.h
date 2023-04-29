@@ -5,7 +5,6 @@
 using namespace std;
 class add_two_numbers {
 private:
-
 public:
     add_two_numbers();
     ~add_two_numbers();

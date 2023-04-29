@@ -1,13 +1,10 @@
 #include "maximal_rectangle.h"
+
 #include <stack>
 
-maximal_rectangle::maximal_rectangle() {
-    
-}
+maximal_rectangle::maximal_rectangle() {}
 
-maximal_rectangle::~maximal_rectangle() {
-    
-}
+maximal_rectangle::~maximal_rectangle() {}
 
 int largestRectangleArea(vector<int>& heights) {
     int pos = 0;

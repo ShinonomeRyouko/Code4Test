@@ -1,12 +1,9 @@
 #include "remove_invalid_parentheses.h"
-#include <unordered_set>
-remove_invalid_parentheses::remove_invalid_parentheses() {
-    
-}
 
-remove_invalid_parentheses::~remove_invalid_parentheses() {
-    
-}
+#include <unordered_set>
+remove_invalid_parentheses::remove_invalid_parentheses() {}
+
+remove_invalid_parentheses::~remove_invalid_parentheses() {}
 
 bool is_valid(string str) {
     int cnt = 0;
@@ -40,7 +37,7 @@ vector<string> remove_invalid_parentheses::removeInvalidParentheses(string s) {
         unordered_set<string> next_set;
         for (auto str : cur_set) {
             for (int i = 0; i < str.size(); i++) {
-                if (i > 0 && str[i] == str[i-1]) {
+                if (i > 0 && str[i] == str[i - 1]) {
                     continue;
                 }
                 if (str[i] == '(' || str[i] == ')') {

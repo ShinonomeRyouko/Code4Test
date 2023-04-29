@@ -1,12 +1,9 @@
 #include "min_window_substr.h"
-#include <vector>
-min_window_substr::min_window_substr() {
-    
-}
 
-min_window_substr::~min_window_substr() {
-    
-}
+#include <vector>
+min_window_substr::min_window_substr() {}
+
+min_window_substr::~min_window_substr() {}
 
 string min_window_substr::minWindow(string s, string t) {
     if (s.length() < t.length() || s.length() == 0 || t.length() == 0) {

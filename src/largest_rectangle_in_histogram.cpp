@@ -1,13 +1,10 @@
 #include "largest_rectangle_in_histogram.h"
-#include <stack>
-#include <cassert>
-largest_rectangle_in_histogram::largest_rectangle_in_histogram() {
-    
-}
 
-largest_rectangle_in_histogram::~largest_rectangle_in_histogram() {
-    
-}
+#include <cassert>
+#include <stack>
+largest_rectangle_in_histogram::largest_rectangle_in_histogram() {}
+
+largest_rectangle_in_histogram::~largest_rectangle_in_histogram() {}
 
 int largest_rectangle_in_histogram::largestRectangleArea(vector<int>& heights) {
     int pos = 0;

@@ -1,13 +1,10 @@
-#include <unordered_set>
 #include "longest_substr_no_repeat_char.h"
 
-longest_substr_no_repeat_char::longest_substr_no_repeat_char() {
-    
-}
+#include <unordered_set>
 
-longest_substr_no_repeat_char::~longest_substr_no_repeat_char() {
-    
-}
+longest_substr_no_repeat_char::longest_substr_no_repeat_char() {}
+
+longest_substr_no_repeat_char::~longest_substr_no_repeat_char() {}
 
 int longest_substr_no_repeat_char::lengthOfLongestSubstring(string s) {
     unordered_set<char> filter;

@@ -7,6 +7,7 @@ class binary_tree_maximum_path_sum {
 private:
     int max_sum;
     int getMax(TreeNode* root);
+
 public:
     binary_tree_maximum_path_sum();
     ~binary_tree_maximum_path_sum();

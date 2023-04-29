@@ -1,19 +1,19 @@
 #ifndef __tree_node_h__
 #define __tree_node_h__
 
-#include <vector>
 #include <climits>
+#include <vector>
 using namespace std;
 // Not A INT.
-#define NAINT INT_MIN 
+#define NAINT INT_MIN
 #define INVALID_INT(a) (a == NAINT)
 struct TreeNode {
     int val;
-    TreeNode *left;
-    TreeNode *right;
+    TreeNode* left;
+    TreeNode* right;
     TreeNode() : val(0), left(nullptr), right(nullptr) {}
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
     // build a binary tree in layer order.
     static TreeNode* gen_from_source(const vector<int>& source, vector<TreeNode*>& elements) {
         int start = elements.size();

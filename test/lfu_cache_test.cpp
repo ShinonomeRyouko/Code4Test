@@ -1,6 +1,6 @@
-#include "gtest/gtest.h"
 #include "lfu_cache.h"
 
+#include "gtest/gtest.h"
 
 TEST(lfu_cacheTest, SimpleTest) {
     LFUCache* obj = new LFUCache(2);

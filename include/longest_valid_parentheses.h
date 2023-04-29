@@ -4,7 +4,6 @@
 using namespace std;
 class longest_valid_parentheses {
 private:
-
 public:
     longest_valid_parentheses();
     ~longest_valid_parentheses();

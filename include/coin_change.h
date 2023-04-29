@@ -5,7 +5,6 @@
 using namespace std;
 class coin_change {
 private:
-
 public:
     coin_change();
     ~coin_change();

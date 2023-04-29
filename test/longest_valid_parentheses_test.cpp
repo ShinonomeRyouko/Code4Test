@@ -1,6 +1,6 @@
-#include "gtest/gtest.h"
 #include "longest_valid_parentheses.h"
 
+#include "gtest/gtest.h"
 
 TEST(longest_valid_parenthesesTest, SimpleTest) {
     longest_valid_parentheses* obj = new longest_valid_parentheses();

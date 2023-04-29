@@ -1,12 +1,8 @@
 #include "binary_tree_maximum_path_sum.h"
 
-binary_tree_maximum_path_sum::binary_tree_maximum_path_sum() {
-    
-}
+binary_tree_maximum_path_sum::binary_tree_maximum_path_sum() {}
 
-binary_tree_maximum_path_sum::~binary_tree_maximum_path_sum() {
-    
-}
+binary_tree_maximum_path_sum::~binary_tree_maximum_path_sum() {}
 
 int binary_tree_maximum_path_sum::getMax(TreeNode* root) {
     if (root == nullptr) {

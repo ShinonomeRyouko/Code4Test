@@ -1,6 +1,7 @@
 #include "tree_node.h"
-#include <stack>
+
 #include <queue>
+#include <stack>
 void PreorderTraversal(TreeNode* root, vector<int>& results) {
     if (root == nullptr) {
         return;

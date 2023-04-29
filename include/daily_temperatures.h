@@ -5,7 +5,6 @@
 using namespace std;
 class daily_temperatures {
 private:
-
 public:
     daily_temperatures();
     ~daily_temperatures();

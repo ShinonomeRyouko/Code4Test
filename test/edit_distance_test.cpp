@@ -1,6 +1,6 @@
-#include "gtest/gtest.h"
 #include "edit_distance.h"
 
+#include "gtest/gtest.h"
 
 TEST(edit_distanceTest, SimpleTest) {
     edit_distance* obj = new edit_distance();

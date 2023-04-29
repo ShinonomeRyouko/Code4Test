@@ -6,7 +6,6 @@
 using namespace std;
 class maximal_rectangle {
 private:
-
 public:
     maximal_rectangle();
     ~maximal_rectangle();

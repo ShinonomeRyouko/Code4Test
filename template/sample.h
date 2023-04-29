@@ -5,7 +5,6 @@
 using namespace std;
 class sample {
 private:
-
 public:
     sample();
     ~sample();

@@ -1,5 +1,6 @@
-#include "gtest/gtest.h"
 #include "serialize_and_des_binary_tree.h"
+
+#include "gtest/gtest.h"
 #include "wrapper.h"
 
 TEST(serialize_and_des_binary_treeTest, SimpleTest) {
@@ -15,7 +16,7 @@ TEST(serialize_and_des_binary_treeTest, SimpleTest) {
     }
 
     wrapper<TreeNode> node_pool;
-    TreeNode* root = node_pool.gen_from_source(vector<int>{1,2,3,NAINT,NAINT,4,5});
+    TreeNode* root = node_pool.gen_from_source(vector<int>{1, 2, 3, NAINT, NAINT, 4, 5});
     serialize_and_des_binary_tree* obj = new serialize_and_des_binary_tree();
     string serialzied_str = "1,2,x,x,3,4,x,x,5,x,x";
     ASSERT_EQ(obj->serialize(root), serialzied_str);
@@ -23,7 +24,7 @@ TEST(serialize_and_des_binary_treeTest, SimpleTest) {
 
     vector<int> res;
     PreorderTraversal(deserialized_tree, res);
-    vector<int> ans{1,2,3,4,5};
+    vector<int> ans{1, 2, 3, 4, 5};
     EXPECT_TRUE(res == ans);
 
     delete obj;

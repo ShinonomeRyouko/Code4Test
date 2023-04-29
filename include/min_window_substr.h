@@ -5,7 +5,6 @@
 using namespace std;
 class min_window_substr {
 private:
-
 public:
     min_window_substr();
     ~min_window_substr();

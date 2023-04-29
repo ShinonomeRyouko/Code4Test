@@ -1,12 +1,9 @@
 #include "sliding_window_maximum.h"
-#include <queue>
-sliding_window_maximum::sliding_window_maximum() {
-    
-}
 
-sliding_window_maximum::~sliding_window_maximum() {
-    
-}
+#include <queue>
+sliding_window_maximum::sliding_window_maximum() {}
+
+sliding_window_maximum::~sliding_window_maximum() {}
 
 vector<int> sliding_window_maximum::maxSlidingWindow(vector<int>& nums, int k) {
     vector<int> ans;

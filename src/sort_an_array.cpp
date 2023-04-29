@@ -1,6 +1,7 @@
 #include "sort_an_array.h"
-#include<random>
+
 #include <cassert>
+#include <random>
 void quick_sort(vector<int>& nums, int left, int right) {
     if (left >= right) {
         return;

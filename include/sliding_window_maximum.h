@@ -5,7 +5,6 @@
 using namespace std;
 class sliding_window_maximum {
 private:
-
 public:
     sliding_window_maximum();
     ~sliding_window_maximum();

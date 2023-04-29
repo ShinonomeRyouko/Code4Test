@@ -1,10 +1,10 @@
-#include "gtest/gtest.h"
-#include "wrapper.h"
 #include "list_node.h"
 
+#include "gtest/gtest.h"
+#include "wrapper.h"
 
 TEST(list_nodeTest, SimpleTest) {
-    vector<int> vec{4,1,2,3,7,6,0};
+    vector<int> vec{4, 1, 2, 3, 7, 6, 0};
     wrapper<ListNode> node_pool;
     ListNode* head = node_pool.gen_from_source(vec);
     ListNode* cur = head;

@@ -15,6 +15,7 @@ private:
     unordered_map<int, list<Node>> freq_table;
     int capacity;
     int min_freq;
+
 public:
     LFUCache(int capacity);
     int get(int key);

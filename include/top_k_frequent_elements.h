@@ -5,7 +5,6 @@
 using namespace std;
 class top_k_frequent_elements {
 private:
-
 public:
     top_k_frequent_elements();
     ~top_k_frequent_elements();

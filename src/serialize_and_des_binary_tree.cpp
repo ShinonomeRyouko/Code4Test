@@ -1,8 +1,7 @@
 #include "serialize_and_des_binary_tree.h"
+
 #include <sstream>
-serialize_and_des_binary_tree::serialize_and_des_binary_tree() {
-    
-}
+serialize_and_des_binary_tree::serialize_and_des_binary_tree() {}
 
 serialize_and_des_binary_tree::~serialize_and_des_binary_tree() {
     for (auto it : gc) {

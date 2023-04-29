@@ -1,12 +1,9 @@
 #include "longest_valid_parentheses.h"
-#include <stack>
-longest_valid_parentheses::longest_valid_parentheses() {
-    
-}
 
-longest_valid_parentheses::~longest_valid_parentheses() {
-    
-}
+#include <stack>
+longest_valid_parentheses::longest_valid_parentheses() {}
+
+longest_valid_parentheses::~longest_valid_parentheses() {}
 
 int longest_valid_parentheses::longestValidParentheses(string s) {
     int max_len = 0;

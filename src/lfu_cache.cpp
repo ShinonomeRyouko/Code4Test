@@ -1,8 +1,6 @@
 #include "lfu_cache.h"
 
-LFUCache::LFUCache(int capacity) : capacity(capacity) {
-    min_freq = 0;
-}
+LFUCache::LFUCache(int capacity) : capacity(capacity) { min_freq = 0; }
 
 int LFUCache::get(int key) {
     auto handle = key_table.find(key);
@@ -55,6 +53,4 @@ void LFUCache::put(int key, int value) {
     }
 }
 
-LFUCache::~LFUCache() {
-    
-}
+LFUCache::~LFUCache() {}

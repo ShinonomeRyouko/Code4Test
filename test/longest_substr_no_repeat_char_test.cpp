@@ -1,6 +1,6 @@
-#include "gtest/gtest.h"
 #include "longest_substr_no_repeat_char.h"
 
+#include "gtest/gtest.h"
 
 TEST(longest_substr_no_repeat_charTest, SimpleTest) {
     longest_substr_no_repeat_char* obj = new longest_substr_no_repeat_char();

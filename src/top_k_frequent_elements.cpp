@@ -1,13 +1,10 @@
 #include "top_k_frequent_elements.h"
-#include <unordered_map>
-#include <queue>
-top_k_frequent_elements::top_k_frequent_elements() {
-    
-}
 
-top_k_frequent_elements::~top_k_frequent_elements() {
-    
-}
+#include <queue>
+#include <unordered_map>
+top_k_frequent_elements::top_k_frequent_elements() {}
+
+top_k_frequent_elements::~top_k_frequent_elements() {}
 
 typedef pair<int, int> pii;
 vector<int> top_k_frequent_elements::topKFrequent(vector<int>& nums, int k) {

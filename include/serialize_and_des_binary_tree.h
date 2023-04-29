@@ -1,15 +1,17 @@
 #ifndef __serialize_and_des_binary_tree_h__
 #define __serialize_and_des_binary_tree_h__
 
-#include <vector>
-#include <string>
 #include <queue>
+#include <string>
+#include <vector>
+
 #include "tree_node.h"
 using namespace std;
 class serialize_and_des_binary_tree {
 private:
     vector<TreeNode*> gc;
     TreeNode* build(queue<string>& str_list);
+
 public:
     serialize_and_des_binary_tree();
     ~serialize_and_des_binary_tree();

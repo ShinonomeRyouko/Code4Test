@@ -14,7 +14,7 @@ void LRUCache::set_head(Node *node) {
 
 LRUCache::LRUCache(int capacity) : capacity(capacity) {
     head = new Node(0, 0);
-    tail = new Node(0 ,0);
+    tail = new Node(0, 0);
     head->next = tail;
     tail->prev = head;
 }
@@ -24,7 +24,7 @@ int LRUCache::get(int key) {
     if (handle == u_map.end()) {
         return -1;
     }
-    Node* node = handle->second;
+    Node *node = handle->second;
     int ret = node->value;
     remove_from_list(node);
     set_head(node);
@@ -43,7 +43,7 @@ void LRUCache::put(int key, int value) {
         u_map.insert(make_pair(key, node));
         set_head(node);
         if (u_map.size() > capacity) {
-            Node* remove_node = tail->prev;
+            Node *remove_node = tail->prev;
             remove_from_list(remove_node);
             node_handle remove_handle = u_map.find(remove_node->key);
             u_map.erase(remove_handle);

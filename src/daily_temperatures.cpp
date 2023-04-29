@@ -1,12 +1,9 @@
 #include "daily_temperatures.h"
-#include <stack>
-daily_temperatures::daily_temperatures() {
-    
-}
 
-daily_temperatures::~daily_temperatures() {
-    
-}
+#include <stack>
+daily_temperatures::daily_temperatures() {}
+
+daily_temperatures::~daily_temperatures() {}
 
 vector<int> daily_temperatures::dailyTemperatures(vector<int>& temperatures) {
     stack<int> mono_stk;

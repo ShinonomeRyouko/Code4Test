@@ -1,12 +1,8 @@
 #include "add_two_numbers.h"
 
-add_two_numbers::add_two_numbers() {
-    
-}
+add_two_numbers::add_two_numbers() {}
 
-add_two_numbers::~add_two_numbers() {
-    
-}
+add_two_numbers::~add_two_numbers() {}
 
 ListNode* add_two_numbers::addTwoNumbers(ListNode* l1, ListNode* l2) {
     int sum = 0;

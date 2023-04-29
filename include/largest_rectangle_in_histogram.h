@@ -5,7 +5,6 @@
 using namespace std;
 class largest_rectangle_in_histogram {
 private:
-
 public:
     largest_rectangle_in_histogram();
     ~largest_rectangle_in_histogram();

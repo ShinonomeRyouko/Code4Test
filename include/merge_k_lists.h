@@ -6,7 +6,6 @@ using namespace std;
 
 class merge_k_lists {
 private:
-
 public:
     merge_k_lists();
     ListNode* mergeKLists(vector<ListNode*>& lists);

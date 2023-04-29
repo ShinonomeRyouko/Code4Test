@@ -1,12 +1,9 @@
 #include "surrounded_regions.h"
-#include <queue>
-surrounded_regions::surrounded_regions() {
-    
-}
 
-surrounded_regions::~surrounded_regions() {
-    
-}
+#include <queue>
+surrounded_regions::surrounded_regions() {}
+
+surrounded_regions::~surrounded_regions() {}
 #include <cassert>
 void surrounded_regions::BFS(vector<vector<char>>& board, int row, int col, int x, int y) {
     queue<pair<int, int>> q;

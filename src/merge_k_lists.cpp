@@ -1,13 +1,10 @@
-#include <queue>
 #include "merge_k_lists.h"
 
-merge_k_lists::merge_k_lists() {
-    
-}
+#include <queue>
 
-merge_k_lists::~merge_k_lists() {
-    
-}
+merge_k_lists::merge_k_lists() {}
+
+merge_k_lists::~merge_k_lists() {}
 
 ListNode* merge_k_lists::mergeKLists(vector<ListNode*>& lists) {
     ListNode* head = nullptr;
