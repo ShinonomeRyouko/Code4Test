@@ -1,4 +1,5 @@
 #include "largest_rectangle_in_histogram.h"
+
 #include <cassert>
 #include <stack>
 

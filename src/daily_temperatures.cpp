@@ -1,4 +1,5 @@
 #include "daily_temperatures.h"
+
 #include <stack>
 
 using namespace std;

@@ -2,8 +2,8 @@
 #define __wrapper_h__
 
 #include <vector>
-using std::vector;
 using std::size_t;
+using std::vector;
 // RAII
 template <class T>
 class wrapper {
