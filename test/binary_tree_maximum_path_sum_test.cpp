@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 #include "binary_tree_maximum_path_sum.h"
 #include "wrapper.h"
 

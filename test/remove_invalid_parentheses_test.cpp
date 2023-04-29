@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 #include "remove_invalid_parentheses.h"
 #include <algorithm>
 
