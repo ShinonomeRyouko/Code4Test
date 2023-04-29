@@ -3,7 +3,8 @@
 
 #include <list>
 #include <unordered_map>
-using namespace std;
+using std::unordered_map;
+using std::list;
 class LFUCache {
 private:
     struct Node {

@@ -1,7 +1,8 @@
 #ifndef __longest_valid_parentheses_h__
 #define __longest_valid_parentheses_h__
+
 #include <string>
-using namespace std;
+using std::string;
 class longest_valid_parentheses {
 private:
 public:

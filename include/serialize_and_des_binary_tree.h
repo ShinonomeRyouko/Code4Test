@@ -6,7 +6,8 @@
 #include <vector>
 
 #include "tree_node.h"
-using namespace std;
+using std::queue;
+using std::string;
 class serialize_and_des_binary_tree {
 private:
     vector<TreeNode*> gc;

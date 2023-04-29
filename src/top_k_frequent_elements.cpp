@@ -1,7 +1,9 @@
 #include "top_k_frequent_elements.h"
-
 #include <queue>
 #include <unordered_map>
+
+using namespace std;
+
 top_k_frequent_elements::top_k_frequent_elements() {}
 
 top_k_frequent_elements::~top_k_frequent_elements() {}

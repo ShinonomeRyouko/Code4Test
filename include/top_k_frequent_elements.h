@@ -2,7 +2,7 @@
 #define __top_k_frequent_elements_h__
 
 #include <vector>
-using namespace std;
+using std::vector;
 class top_k_frequent_elements {
 private:
 public:

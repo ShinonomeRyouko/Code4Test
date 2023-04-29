@@ -2,7 +2,7 @@
 #define __min_window_substr_h__
 
 #include <string>
-using namespace std;
+using std::string;
 class min_window_substr {
 private:
 public:

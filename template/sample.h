@@ -2,7 +2,8 @@
 #define __sample_h__
 
 #include <vector>
-using namespace std;
+using std::vector;
+
 class sample {
 private:
 public:

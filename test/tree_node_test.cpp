@@ -28,6 +28,14 @@ TEST(tree_nodeTest, SimpleTest) {
     CheckTraversal(root, {4, 5, 2, 6, 7, 3, 1}, PostorderTraversal);
 
     CheckTraversal(root, {1, 2, 3, 4, 5, 6, 7}, LevelorderTraversal);
+
+    vector<vector<int>> res = move(levelOrder(root));
+    vector<vector<int>> ans{{1},{2,3},{4,5,6,7}};
+    EXPECT_TRUE(res == ans);
+
+    vector<int> res1 = rightSideView(root);
+    vector<int> ans1 = {1,3,7};
+    EXPECT_TRUE(res == ans);
 }
 
 /*
@@ -51,4 +59,12 @@ TEST(tree_nodeTest, NullNodeTest) {
     CheckTraversal(root, {4, 2, 6, 5, 3, 1}, PostorderTraversal);
 
     CheckTraversal(root, {1, 2, 3, 4, 5, 6}, LevelorderTraversal);
+
+    vector<vector<int>> res = move(levelOrder(root));
+    vector<vector<int>> ans{{1},{2,3},{4,5},{6}};
+    EXPECT_TRUE(res == ans);
+
+    vector<int> res1 = rightSideView(root);
+    vector<int> ans1 = {1,3,5,6};
+    EXPECT_TRUE(res == ans);
 }

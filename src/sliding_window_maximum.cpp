@@ -1,6 +1,8 @@
 #include "sliding_window_maximum.h"
-
 #include <queue>
+
+using namespace std;
+
 sliding_window_maximum::sliding_window_maximum() {}
 
 sliding_window_maximum::~sliding_window_maximum() {}

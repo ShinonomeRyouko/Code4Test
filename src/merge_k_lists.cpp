@@ -1,6 +1,7 @@
 #include "merge_k_lists.h"
-
 #include <queue>
+
+using namespace std;
 
 merge_k_lists::merge_k_lists() {}
 

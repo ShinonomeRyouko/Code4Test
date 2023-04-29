@@ -3,7 +3,7 @@
 
 #include <vector>
 
-using namespace std;
+using std::vector;
 class maximal_rectangle {
 private:
 public:

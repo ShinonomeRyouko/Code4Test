@@ -1,7 +1,9 @@
 #include "largest_rectangle_in_histogram.h"
-
 #include <cassert>
 #include <stack>
+
+using namespace std;
+
 largest_rectangle_in_histogram::largest_rectangle_in_histogram() {}
 
 largest_rectangle_in_histogram::~largest_rectangle_in_histogram() {}

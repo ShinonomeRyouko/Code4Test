@@ -2,7 +2,7 @@
 #define __sort_an_array_h__
 
 #include <vector>
-using namespace std;
+using std::vector;
 
 void QuickSort(vector<int>& nums);
 

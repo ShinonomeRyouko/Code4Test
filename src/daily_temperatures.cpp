@@ -1,6 +1,8 @@
 #include "daily_temperatures.h"
-
 #include <stack>
+
+using namespace std;
+
 daily_temperatures::daily_temperatures() {}
 
 daily_temperatures::~daily_temperatures() {}

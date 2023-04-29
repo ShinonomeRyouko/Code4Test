@@ -1,5 +1,7 @@
 #include "coin_change.h"
 
+using namespace std;
+
 coin_change::coin_change() {}
 
 coin_change::~coin_change() {}
