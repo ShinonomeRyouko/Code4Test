@@ -1,5 +1,7 @@
 #include "lfu_cache.h"
 
+using namespace std;
+
 LFUCache::LFUCache(int capacity) : capacity(capacity) { min_freq = 0; }
 
 int LFUCache::get(int key) {

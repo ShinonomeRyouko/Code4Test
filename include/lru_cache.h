@@ -2,7 +2,7 @@
 #define __lru_cache_h__
 
 #include <unordered_map>
-using namespace std;
+using std::unordered_map;
 class LRUCache {
 private:
     struct Node {

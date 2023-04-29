@@ -1,6 +1,8 @@
 #include "serialize_and_des_binary_tree.h"
-
 #include <sstream>
+
+using namespace std;
+
 serialize_and_des_binary_tree::serialize_and_des_binary_tree() {}
 
 serialize_and_des_binary_tree::~serialize_and_des_binary_tree() {

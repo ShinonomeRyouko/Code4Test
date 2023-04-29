@@ -2,7 +2,6 @@
 #define __add_two_numbers_h__
 
 #include "list_node.h"
-using namespace std;
 class add_two_numbers {
 private:
 public:

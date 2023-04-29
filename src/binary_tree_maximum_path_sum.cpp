@@ -1,5 +1,7 @@
 #include "binary_tree_maximum_path_sum.h"
 
+using namespace std;
+
 binary_tree_maximum_path_sum::binary_tree_maximum_path_sum() {}
 
 binary_tree_maximum_path_sum::~binary_tree_maximum_path_sum() {}

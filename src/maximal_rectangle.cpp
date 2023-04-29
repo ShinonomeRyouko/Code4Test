@@ -1,6 +1,7 @@
 #include "maximal_rectangle.h"
-
 #include <stack>
+
+using namespace std;
 
 maximal_rectangle::maximal_rectangle() {}
 

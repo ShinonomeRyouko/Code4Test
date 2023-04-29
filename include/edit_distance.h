@@ -2,7 +2,7 @@
 #define __edit_distance_h__
 
 #include <string>
-using namespace std;
+using std::string;
 class edit_distance {
 private:
 public:

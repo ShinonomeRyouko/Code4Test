@@ -3,7 +3,8 @@
 
 #include <string>
 #include <vector>
-using namespace std;
+using std::vector;
+using std::string;
 class remove_invalid_parentheses {
 private:
 public:

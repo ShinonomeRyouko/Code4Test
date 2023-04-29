@@ -1,6 +1,7 @@
 #include "longest_substr_no_repeat_char.h"
 
 #include <unordered_set>
+using namespace std;
 
 longest_substr_no_repeat_char::longest_substr_no_repeat_char() {}
 
