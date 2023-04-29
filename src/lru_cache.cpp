@@ -1,5 +1,7 @@
 #include "lru_cache.h"
 
+using namespace std;
+
 void LRUCache::remove_from_list(Node *node) {
     node->prev->next = node->next;
     node->next->prev = node->prev;

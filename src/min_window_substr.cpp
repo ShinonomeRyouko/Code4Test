@@ -1,6 +1,8 @@
 #include "min_window_substr.h"
-
 #include <vector>
+
+using namespace std;
+
 min_window_substr::min_window_substr() {}
 
 min_window_substr::~min_window_substr() {}

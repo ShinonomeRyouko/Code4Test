@@ -2,7 +2,7 @@
 #define __largest_rectangle_in_histogram_h__
 
 #include <vector>
-using namespace std;
+using std::vector;
 class largest_rectangle_in_histogram {
 private:
 public:

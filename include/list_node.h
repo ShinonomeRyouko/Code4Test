@@ -2,7 +2,7 @@
 #define __list_node_h__
 
 #include <vector>
-using namespace std;
+using std::vector;
 struct ListNode {
     int val;
     ListNode* next;

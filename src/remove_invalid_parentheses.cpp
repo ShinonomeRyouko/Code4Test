@@ -1,6 +1,8 @@
 #include "remove_invalid_parentheses.h"
-
 #include <unordered_set>
+
+using namespace std;
+
 remove_invalid_parentheses::remove_invalid_parentheses() {}
 
 remove_invalid_parentheses::~remove_invalid_parentheses() {}

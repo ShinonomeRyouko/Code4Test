@@ -2,7 +2,6 @@
 #define __binary_tree_maximum_path_sum_h__
 
 #include "tree_node.h"
-using namespace std;
 class binary_tree_maximum_path_sum {
 private:
     int max_sum;

@@ -2,7 +2,7 @@
 #define __sliding_window_maximum_h__
 
 #include <vector>
-using namespace std;
+using std::vector;
 class sliding_window_maximum {
 private:
 public:

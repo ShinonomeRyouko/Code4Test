@@ -1,6 +1,7 @@
 #include "trap_rain_water.h"
-
 #include <queue>
+
+using namespace std;
 
 typedef pair<int, int> pii;
 int Solution::trapRainWater(vector<vector<int>>& heightMap) {

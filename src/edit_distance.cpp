@@ -1,6 +1,8 @@
 #include "edit_distance.h"
-
 #include <vector>
+
+using namespace std;
+
 edit_distance::edit_distance() {}
 
 edit_distance::~edit_distance() {}

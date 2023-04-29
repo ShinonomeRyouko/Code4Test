@@ -2,7 +2,7 @@
 #define __longest_substr_no_repeat_char_h__
 
 #include <string>
-using namespace std;
+using std::string;
 class longest_substr_no_repeat_char {
 private:
 public:

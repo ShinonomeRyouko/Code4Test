@@ -2,7 +2,7 @@
 #define __daily_temperatures_h__
 
 #include <vector>
-using namespace std;
+using std::vector;
 class daily_temperatures {
 private:
 public:

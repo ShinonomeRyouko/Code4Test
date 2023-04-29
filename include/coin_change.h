@@ -2,7 +2,7 @@
 #define __coin_change_h__
 
 #include <vector>
-using namespace std;
+using std::vector;
 class coin_change {
 private:
 public:

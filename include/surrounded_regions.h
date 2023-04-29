@@ -2,7 +2,7 @@
 #define __surrounded_regions_h__
 
 #include <vector>
-using namespace std;
+using std::vector;
 class surrounded_regions {
 private:
     vector<int> direction{-1, 0, 1, 0, -1};
