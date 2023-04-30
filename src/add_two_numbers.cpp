@@ -7,6 +7,7 @@ add_two_numbers::~add_two_numbers() {}
 ListNode* add_two_numbers::addTwoNumbers(ListNode* l1, ListNode* l2) {
     int sum = 0;
     int bubble = 0;
+    int transfered = 0;
     ListNode* head = nullptr;
     ListNode* prev = nullptr;
     ListNode* cur = nullptr;
