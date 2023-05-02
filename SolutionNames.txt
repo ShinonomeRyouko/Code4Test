@@ -22,3 +22,4 @@ sort_characters_by_frequency
 longest_consecutive_sequence 
 subarray_sum_equals_k 
 product_of_array_except_self 
+corporate_flight_bookings 
