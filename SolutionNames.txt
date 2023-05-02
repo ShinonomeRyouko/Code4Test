@@ -24,3 +24,4 @@ subarray_sum_equals_k
 product_of_array_except_self 
 corporate_flight_bookings 
 container_with_most_water 
+jump_game 
