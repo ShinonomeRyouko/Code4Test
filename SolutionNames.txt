@@ -28,3 +28,4 @@ jump_game
 jump_game_ii 
 gas_station 
 non_overlapping_intervals 
+partition_labels 
