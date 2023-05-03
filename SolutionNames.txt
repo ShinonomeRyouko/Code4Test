@@ -35,3 +35,4 @@ queue_reconstruction_by_height
 find_unsorted_subarray 
 sort_colors 
 three_sum_closest 
+design_linked_list 
